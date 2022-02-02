@@ -3,10 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ProductPage extends StatelessWidget {
-  final String imageUrl;
-  final String name;
-  final String Brand;
-  ProductPage(this.imageUrl,this.name,this.Brand);
+  ProductPage();
   Widget _buildAddressPriceRow(double price) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -41,26 +38,16 @@ class ProductPage extends StatelessWidget {
       child: Scaffold(
             appBar: AppBar(
 
-              title: Text(name),
+              title: Text("something"),
             ),
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                FadeInImage(
-                  image: NetworkImage(imageUrl),
-                  placeholder: AssetImage('assets/food.jpg'),
-                  height: 300.0,
-                  fit: BoxFit.cover,
-                ),
-                // Container(
-                //   padding: EdgeInsets.all(10.0),
-                //   child: TitleDefault(product.title),
-                // ),
                 _buildAddressPriceRow(400000),
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: Text(
-                    Brand,
+                    "some details",
                     textAlign: TextAlign.center,
                   ),
                  )

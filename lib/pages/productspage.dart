@@ -38,40 +38,33 @@ class _ProductsPageState extends State<ProductsPage>{
           ),
           centerTitle: true,
         ),
-        body: list != null
-            ? ListView.builder(
-                itemCount: list.length,
+        body: ListView.builder(
+                itemCount: 1,
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () async{
                       Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ProductPage(
-                  list[index]["image_url"],
-                  list[index]["name"],
-                  list[index]["Brand"],
                   )),
               );
                     },
                     child: Card(
                       child: Column(
                         children: <Widget>[
-                          FadeInImage(
-                            image: NetworkImage(list[index]["image_url"]), //product.image
-                            placeholder: AssetImage('assets/food.jpg'),
-                            height: 300.0,
-                            fit: BoxFit.cover,
-                          ),
-                          //  _buildTitlePriceRow(),
-                          //  AddressTag('Union Square, San Francisco'),
-                          //  _buildActionButtons(context)
+                          ListTile(
+                            leading: Icon(Icons.movie),
+                            title: Text('Item'),
+                            subtitle: Text('Icream is good for health'),
+                          
+                          )
                         ],
                       ),
                     ),
                   );
                 },
               )
-            : const Center(child: Text('internet please...!')));
+    );
   }
 }
 
