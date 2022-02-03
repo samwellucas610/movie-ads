@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import 'pages/productspage.dart';
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'View Latest Movies',
+              'Have internent connection..',
             ),
             ElevatedButton(
               child:Text("view movies"),
