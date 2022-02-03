@@ -3,7 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ProductPage extends StatelessWidget {
-  ProductPage();
+  final String title,summary;
+  ProductPage(this.title,this.summary);
   Widget _buildAddressPriceRow(double price) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +39,7 @@ class ProductPage extends StatelessWidget {
       child: Scaffold(
             appBar: AppBar(
 
-              title: Text("something"),
+              title: Text(title),
             ),
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,7 +48,7 @@ class ProductPage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: Text(
-                    "some details",
+                    summary,
                     textAlign: TextAlign.center,
                   ),
                  )
